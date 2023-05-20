@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Payment Website</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        #qr-code {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan the QR Code to Make a Payment</h1>
+    <div id="qr-code">
+        <img src="payment/payme.jpeg" alt="QR Code" width="500" height="800"/>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Detect if the payment is completed
+            // This is just a placeholder; you would typically use an API or backend service to handle the payment completion logic
+            const paymentCompleted = false;
+
+            // Poll for payment completion
+            const checkPaymentStatus = setInterval(() => {
+                // Replace the 'check_payment_status_url' with the URL to check the payment status
+                fetch('check_payment_status_url')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.paymentStatus === 'completed') {
+                            clearInterval(checkPaymentStatus);
+                            displayPaymentConfirmation();
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Error checking payment status:', error);
+                    });
+            }, 3000); // Adjust the interval as needed
+
+            // Display payment confirmation message
+            function displayPaymentConfirmation() {
+                document.getElementById('qr-code').innerHTML = '<h2>Payment Successful!</h2>';
+            }
+        });
+    </script>
+</body>
+</html>
