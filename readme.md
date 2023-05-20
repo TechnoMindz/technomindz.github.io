@@ -1,7 +1,7 @@
 # Hola To Everyone
 
 ## Here is the announcement Our website is out online !!!
-We are thrilled to share some fantastic news with you: our first website will be launching on May 1st! After months of hard work, creativity,  we are ready to unveil our digital masterpiece to the world.
+We are thrilled to share some fantastic news with you: our first website will be launching on May 21st! After months of hard work, creativity,  we are ready to unveil our digital masterpiece to the world.
 
 Our website represents a significant milestone for us, as it serves as a platform to showcase our brand, products, and services. With user-friendly navigation, captivating visuals, and engaging content, we have crafted an online experience that truly reflects our values and captures the essence of what we do.
 
